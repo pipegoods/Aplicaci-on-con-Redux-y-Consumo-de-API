@@ -2,8 +2,13 @@ import React, {Component} from 'react';
 import Page from './page';
 import { connect } from 'react-redux';
 
-class Login extends Component {
+type MyState = { currentuser: object };
+
+class Login extends Component<MyState> {
     render() {
+        const {currentuser} = this.props;
+        console.log(currentuser);
+        
         return (
             <Page />
         );
@@ -18,4 +23,4 @@ const mapStateToProps = (state) => {
 
 connect(mapStateToProps);
 
-export default Login;
+export default connect(mapStateToProps)(Login);
