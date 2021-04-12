@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 type MyState = { currentuser: object };
 
 class Login extends Component<MyState> {
+   
+
     render() {
         const {currentuser} = this.props;
         console.log(currentuser);
@@ -14,6 +16,8 @@ class Login extends Component<MyState> {
         );
     }
 }
+
+
 
 const mapStateToProps = (state) => {
     return {
